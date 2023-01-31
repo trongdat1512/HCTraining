@@ -17,10 +17,10 @@ public class Enemy : MonoBehaviour
     private Vector3 _destinationPoint;
     private float _idleTime = 1;
     
-    private static readonly int WalkTrigger = Animator.StringToHash("Walk");
-    private static readonly int RunTrigger = Animator.StringToHash("Run");
-    private static readonly int IdleTrigger = Animator.StringToHash("Idle");
-    private static readonly int AttackTrigger = Animator.StringToHash("Attack");
+    public static readonly int WalkTrigger = Animator.StringToHash("Walk");
+    public static readonly int RunTrigger = Animator.StringToHash("Run");
+    public static readonly int IdleTrigger = Animator.StringToHash("Idle");
+    public static readonly int AttackTrigger = Animator.StringToHash("Attack");
 
     // Update is called once per frame
     /*void Update()
