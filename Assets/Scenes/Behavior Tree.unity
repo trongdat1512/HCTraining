@@ -1284,7 +1284,7 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 2146255588}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2146255594
+--- !u!114 &2146255593
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1293,7 +1293,60 @@ MonoBehaviour:
   m_GameObject: {fileID: 2146255589}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80eb2f4de4e6467bad678dd8034506be, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d7b55c7ecdb49a4a89fa5e6f9022861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  context: {fileID: 2146255591}
+  startWhenEnabled: 1
+  asynchronousLoad: 0
+  pauseWhenDisabled: 0
+  restartWhenComplete: 0
+  logTaskChanges: 0
+  group: 0
+  resetValuesOnRestart: 0
+  externalBehavior: {fileID: 0}
+  mBehaviorSource:
+    behaviorName: Behavior
+    behaviorDescription: 
+    mTaskData:
+      types: []
+      parentIndex: 
+      startIndex: 
+      variableStartIndex: 
+      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(317,35)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(-1.50178146,127.656143)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(0,110)"},"ID":2,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-340.1522,186.645447)"},"ID":3,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"IsPlayerInRange","NodeData":{"Offset":"(-74.8717651,127.179443)","Comment":"Attack
+        Range"},"ID":4,"Name":"Is Player In Range","Instant":true,"Transformplayer":0,"SingledetectRange":1.5},{"Type":"Attack","NodeData":{"Offset":"(57.78389,129.725281)"},"ID":5,"Name":"Attack","Instant":true,"SharedEnemyDatacontext":{"Type":"SharedEnemyData","Name":"Context","IsShared":true,"EnemymValue":1},"SingleattackCooldown":2}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-29.62954,202.341522)"},"ID":6,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Both","Children":[{"Type":"IsPlayerInRange","NodeData":{"Offset":"(-86.63966,112.608841)","Comment":"Detect
+        Range"},"ID":7,"Name":"Is Player In Range","Instant":true,"Transformplayer":2,"SingledetectRange":5},{"Type":"GoTo","NodeData":{"Offset":"(75.833374,123.922134)","Comment":"Chase
+        Player"},"ID":8,"Name":"Go To","Instant":true,"SharedEnemyDatacontext":{"Type":"SharedEnemyData","Name":"Context","IsShared":true,"EnemymValue":3},"SharedVector3destination":{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"Player
+        Pos","IsShared":true,"PropertyMapping":"UnityEngine.Transform/position","PropertyMappingOwner":4,"Vector3mValue":"(0,0,0)"},"BooleanisRunning":true}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(300.370544,188.518509)"},"ID":9,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"GetRandomPos","NodeData":{"Offset":"(-117.192123,125.804718)"},"ID":10,"Name":"Get
+        Random Pos","Instant":true,"SharedVector3target":{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"Target
+        Pos","IsShared":true,"Vector3mValue":"(0,0,0)"}},{"Type":"GoTo","NodeData":{"Offset":"(4.636174,132.803421)","Comment":"Patrol\n"},"ID":11,"Name":"Go
+        To","Instant":true,"SharedEnemyDatacontext":{"Type":"SharedEnemyData","Name":"Context","IsShared":true,"EnemymValue":5},"SharedVector3destination":{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"Target
+        Pos","IsShared":true,"Vector3mValue":"(0,0,0)"},"BooleanisRunning":false},{"Type":"Idle","NodeData":{"Offset":"(114.62616,125.803436)"},"ID":12,"Name":"Idle","Instant":true,"SharedEnemyDatacontext":{"Type":"SharedEnemyData","Name":"Context","IsShared":true,"EnemymValue":6},"SingleidleTime":2}]}]}]},"DetachedTasks":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-317.142761,190.0003)"},"ID":13,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Both","Children":[{"Type":"IsPlayerInRange","NodeData":{"Offset":"(-168.379028,138.539948)"},"ID":14,"Name":"Is
+        Player In Range","Instant":true,"Transformplayer":7,"SingledetectRange":5},{"Type":"CheckPlayerHasWeapon","NodeData":{"Offset":"(-1.71661377E-05,141.111115)"},"ID":15,"Name":"Check
+        Player Has Weapon","Instant":true,"SharedBoolisPlayerHasWeapon":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"IsPlayerHasWeapon","IsShared":true,"PropertyMapping":"Player/HasWeapon","PropertyMappingOwner":8,"BooleanmValue":false}},{"Type":"Flee","NodeData":{"Offset":"(152.732117,135.206635)"},"ID":16,"Name":"Flee","Instant":true,"TransformplayerTransform":9,"SharedEnemyDatacontext":{"Type":"SharedEnemyData","Name":"Context","IsShared":true,"EnemymValue":10},"BooleanisRunning":true}]}],"Variables":[{"Type":"SharedEnemyData","Name":"Context","IsShared":true,"EnemymValue":11},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"Target
+        Pos","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"Player
+        Pos","IsShared":true,"PropertyMapping":"UnityEngine.Transform/position","PropertyMappingOwner":12,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"IsPlayerHasWeapon","IsShared":true,"PropertyMapping":"Player/HasWeapon","PropertyMappingOwner":13,"BooleanmValue":false}]}'
+      fieldSerializationData:
+        typeName: []
+        fieldNameHash: 
+        startIndex: 
+        dataPosition: 
+        unityObjects:
+        - {fileID: 73393603}
+        - {fileID: 2146255591}
+        - {fileID: 73393603}
+        - {fileID: 2146255591}
+        - {fileID: 73393604}
+        - {fileID: 2146255591}
+        - {fileID: 2146255591}
+        - {fileID: 73393603}
+        - {fileID: 73393604}
+        - {fileID: 73393603}
+        - {fileID: 2146255591}
+        - {fileID: 2146255591}
+        - {fileID: 73393604}
+        - {fileID: 73393604}
+        byteData: 
+        byteDataArray: 
+      Version: 1.7.2
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 1
